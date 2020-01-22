@@ -1,0 +1,24 @@
+{
+	"env": {
+		"browser": true
+	},
+	"rules": {
+		"quotemark": [false, "single", "jsx-single"],
+		"semicolon": [false, "never"],
+		"import/no-unresolved": "off",
+		"import/no-extraneous-dependencies": "off",
+		"no-console": [true, "log", "error"],
+		"trailing-comma": [
+			false,
+			{
+				"singleline": "never",
+				"multiline": {
+					"objects": "never",
+					"arrays": "never",
+					"functions": "never",
+					"typeLiterals": "never"
+				}
+			}
+		]
+	}
+}

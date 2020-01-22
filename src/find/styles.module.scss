@@ -1,0 +1,85 @@
+@import '../_base.scss';
+
+.FindUser {
+	text-align: center;
+}
+
+form {
+	text-align: center;
+	color: $base-color;
+
+	border-radius: 0.5rem;
+	padding: 0.5rem 0.5rem 0 0.5rem;
+
+	input,
+	input:focus,
+	input[type]:focus {
+		padding: 0.125rem;
+		outline: 0 none;
+		border-radius: 0.25rem;
+	}
+
+	& > div {
+		display: grid;
+		grid-template-columns: 50% 50% auto;
+		grid-column-gap: 1rem;
+		grid-row-gap: 0.5rem;
+		justify-content: center;
+		align-items: center;
+		justify-self: center;
+
+		margin-top: 0.5rem;
+
+		label {
+			text-align: right;
+		}
+		input {
+			width: 10rem;
+		}
+		& > div {
+			display: inline-flex;
+		}
+
+		&:last-child {
+			& > button {
+				grid-column: 2 !important;
+				justify-self: baseline;
+				margin-top: 1rem;
+				color: rgb(107, 107, 107);
+				border-radius: 0.25rem;
+				grid-column: 1 / 2;
+				&:disabled {
+					border: 1px solid #999999;
+				}
+			}
+		}
+	}
+}
+
+.message {
+	text-align: center;
+	padding-top: 1rem;
+}
+
+.error {
+	padding-left: 0.5rem;
+	color: rgb(200, 0, 0);
+
+	font-size: 8pt;
+	font-weight: bold;
+
+	align-self: center;
+	text-align: left;
+}
+
+.cardContainer {
+	margin: 1rem;
+	--auto-grid-min-size: 16rem;
+	display: grid;
+	grid-template-columns: repeat(
+		auto-fill,
+		minmax(var(--auto-grid-min-size), auto)
+	);
+	grid-gap: 1rem;
+	justify-content: center;
+}

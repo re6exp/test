@@ -1,0 +1,28 @@
+@import '../_base.scss';
+
+:global(.spinner-container) {
+	width: 100%;
+	display: flex;
+	min-height: ($card-height - 1rem) !important;
+	justify-content: center;
+}
+:global(.spinner) {
+	align-self: center;
+	border: 1rem solid #f3f3f3;
+	border-top: 1rem solid $base-color;
+	border-radius: 50%;
+	width: 4rem;
+	height: 4rem;
+	:global {
+		animation: spin 2s linear infinite;
+	}
+}
+
+@keyframes :global(spin) {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
